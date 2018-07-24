@@ -38,13 +38,36 @@ dashboardPage(skin="black",
                            plotOutput("plot")),
                        box(title="Total Population Forecast - County",
                            plotOutput("plotPop"))),
-                    fluidRow(tabBox(title = "Growth Rate Charts",
-                               tabPanel("Region", plotOutput("RplotG")),
-                               tabPanel("County", plotOutput("plotG")))
-#                              ,tabBox(title = "Growth Rate Tables",
-#                                     tabPanel("Region", dataTableOutput("tableG")),
-#                                     tabPanel("County", dataTableOutput("RtableG")))
-                             )
+   
+#              fluidRow(box(title="Total Job and LF Forecast - Region",
+#                           plotOutput("plotLFReg")),
+#                       box(title="Total Job and LF Forecast - County",
+#                           plotOutput("plotLF"))),
+            
+#              fluidRow(box(title="Growth Rate Chart - Region",
+#                           plotOutput("RplotG")),
+#                       box(title="Growth Rate Chart - County",
+#                           plotOutput("plotG")))
+              
+#              fluidRow(tabBox(title = "Growth Rate Charts",
+#                              tabPanel("County", plotOutput("plotG")), 
+#                              tabPanel("Region", plotOutput("RplotG"))),
+#                       box(title="Total Job and LF Forecast  - County",
+#                              plotOutput("plotLF")))
+            fluidRow(box(title = "County Growth Rate Chart",
+                          plotOutput("plotG")),
+                     box(title="Total Job and LF Forecast  - Region",
+                          plotOutput("plotLFReg")))
+
+#              fluidRow(tabBox(title = "Growth Rate Charts",
+#                              tabPanel("County", plotOutput("plotG")),
+#                              tabPanel("Region", plotOutput("RplotG"))),
+#                      tabBox(title="Total Job and LF Forecast",
+#                             tabPanel("County", plotOutput("plotLF")),
+#                             tabPanel("Region", plotOutput("plotLFReg"))))
+                      
+
+
       )
 )
 
